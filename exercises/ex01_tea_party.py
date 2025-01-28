@@ -20,12 +20,15 @@ def cost(tea_count: int, treat_count: int) -> float:
 
 def main_planner(guests: int) -> None:
     """This summarizes all the information for the party"""
-    print("A cozy tea party for ", guests, " people!")
+    print("A Cozy Tea Party For", guests, "People!")
     print("Tea Bags:", tea_bags(people=guests))
     print("Treats:", treats(people=guests))
     print(
         "Cost:",
-        cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests)),
+        "$"
+        + str(
+            cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests))
+        ),
     )
     return None
 
